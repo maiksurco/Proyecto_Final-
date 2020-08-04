@@ -1,6 +1,7 @@
 package pe.edu.upeu.materiales;
 
-public class ProcesoPedidos {
+public class Proceso {
+    public String numeroVenta;
     public String fechaPedidos;
     public String productoId;
     public String nombreProducto;
@@ -8,6 +9,14 @@ public class ProcesoPedidos {
     public Double cantidadProducto;
     public Double costoTotal;
     public Double precioTotal;
+
+    public String getNumeroPedido() {
+        return numeroVenta;
+    }
+
+    public void setNumeroPedido(String numeroPedido) {
+        this.numeroVenta = numeroPedido;
+    }
 
     public String getFechaPedidos() {
         return fechaPedidos;
@@ -64,5 +73,6 @@ public class ProcesoPedidos {
     public void setPrecioTotal(Double precioTotal) {
         this.precioTotal = precioTotal;
     }
-    
 }
+
+    
