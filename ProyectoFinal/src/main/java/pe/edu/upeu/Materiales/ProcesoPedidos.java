@@ -1,10 +1,11 @@
 package pe.edu.upeu.materiales;
 
-public class Proceso {
+public class ProcesoPedidos {
     public String fechaPedidos;
     public String productoId;
+    public String nombreProducto;
     public Double costoProducto;
-    public String cantidadProducto;
+    public Double cantidadProducto;
     public Double costoTotal;
     public Double precioTotal;
 
@@ -24,6 +25,14 @@ public class Proceso {
         this.productoId = productoId;
     }
 
+    public String getNombreProducto() {
+        return nombreProducto;
+    }
+
+    public void setNombreProducto(String nombreProducto) {
+        this.nombreProducto = nombreProducto;
+    }
+
     public Double getCostoProducto() {
         return costoProducto;
     }
@@ -32,11 +41,11 @@ public class Proceso {
         this.costoProducto = costoProducto;
     }
 
-    public String getCantidadProducto() {
+    public Double getCantidadProducto() {
         return cantidadProducto;
     }
 
-    public void setCantidadProducto(String cantidadProducto) {
+    public void setCantidadProducto(Double cantidadProducto) {
         this.cantidadProducto = cantidadProducto;
     }
 
