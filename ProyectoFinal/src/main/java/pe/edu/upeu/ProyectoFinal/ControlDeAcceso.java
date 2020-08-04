@@ -1,4 +1,4 @@
-package pe.edu.upeu.ProyectoFinal;
+package pe.edu.upeu.proyectofinal;
 
 import javax.swing.*;
 import java.awt.*;

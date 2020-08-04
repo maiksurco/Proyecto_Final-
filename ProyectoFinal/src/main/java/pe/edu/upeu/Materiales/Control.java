@@ -1,4 +1,4 @@
-package pe.edu.upeu.Materiales;
+package pe.edu.upeu.materiales;
 
 public class Control {
     public String nombredeusuario;
