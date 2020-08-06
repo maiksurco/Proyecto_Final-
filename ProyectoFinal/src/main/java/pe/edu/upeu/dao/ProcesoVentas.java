@@ -45,8 +45,7 @@ public class ProcesoVentas extends AppCrud{
             }
         }
         leerDetalleVentaX=new LeerArchivo("DetalleVenta.txt");
-        detalle.setNumeroVentDetalle(generadorId(leerDetalleVentaX, 0, "D"));
-        detalle.setNumeroVenta(numeroVenta);                      
+        detalle.setNumeroVentDetalle(generadorId(leerDetalleVentaX, 0, "D"));                    
         detalle.setProductoId(teclado.leer("", "Ingrese el ID del producto que desea hacer pedido"));
         
         detalle.setCantidadProducto(teclado.leer(0.0, "Ingrese la cantidad del producto que desea hacer pedido"));        
@@ -55,7 +54,6 @@ public class ProcesoVentas extends AppCrud{
         detalle.setNombreProducto(listaProduc[0][1].toString());
         detalle.setCostoProducto(Double.parseDouble(listaProduc[0][2].toString()));
         detalle.setCostoTotal(detalle.getCostoProducto()*detalle.getCantidadProducto());
-        //leerDetalleVentaX=new LeerArchivo("DetalleVenta.txt");
         leerDetalleVentaX=new LeerArchivo("DetalleVenta.txt");
         return agregarContenido(leerDetalleVentaX, detalle);
 
@@ -70,6 +68,7 @@ public class ProcesoVentas extends AppCrud{
         }
         Pedidos=new Proceso();
         leerProdPedidoX=new LeerArchivo("Pedidos.txt");
+        System.out.println("-----------------------------------------");
         Pedidos.setNumeroVenta(generadorId(leerProdPedidoX, 0, "V"));
         Pedidos.setFechaPedidos(formateador.format(new Date()));
         Pedidos.setPrecioTotal(0.0);

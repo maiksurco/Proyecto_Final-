@@ -39,7 +39,7 @@ public class App {
 
 
     public static void main( String[] args ){
-        System.out.println( "--------------------------Eliga un Algoritmo--------------------------" );
+        System.out.println( "--------------------------Control de Acceso--------------------------" );
         
             Console con = System.console();    
 
@@ -50,12 +50,13 @@ public class App {
             String usuario=teclado.leer("", "Ingrese Usuario:");      
             System.out.println("Ingrese su clave: ");   
             char[] password=con.readPassword();   
-            if(usuario.equals("alan") &&  String.valueOf(password).equals("123456")){  
+            if(usuario.equals("small business") &&  String.valueOf(password).equals("147258369")){  
 
+                System.out.println( "--------------------------Eliga Algoritmo--------------------------" );
             do{            
                 numAlgoritm=teclado.leer(0,
                 "Ingrese el numero de Algoritmo que desea probar: \n"+
-                "1= Control de Acceso\n"+
+                "1= Control de Acceso (Gráfico)\n"+
                 "2= Agregar Productos\n"+
                 "3= Registrar Pedido Nuevo\n"+
                 "4= Reporte de Nueva Venta");

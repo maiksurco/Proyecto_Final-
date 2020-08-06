@@ -46,7 +46,7 @@ public class AppCrud {
 
     public Object[][] agregarContenido(LeerArchivo aq, Object modelo){
         Object[][] datosAnt=listarContenido(aq);
-        int tamanho=(datosAnt==null?0:datosAnt.length);
+        int tamanho=(datosAnt==null?0:datosAnt.length); 
         int numColum=numColumna(aq, modelo);
         Object[][] datosNew=new Object[tamanho+1][numColum];
         for (int i = 0; i < tamanho; i++) {

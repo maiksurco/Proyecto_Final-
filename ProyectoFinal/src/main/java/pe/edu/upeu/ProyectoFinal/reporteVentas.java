@@ -18,7 +18,7 @@ public class reporteVentas extends AppCrud {
     public void ReporteVentasRangoFecha(String fechaInicio, String fechaFinal){
         leerArc=new LeerArchivo("Pedidos.txt");
         System.out.println("-------------------------REPORTE DE LA VENTA POR FECHA------------------------------");        
-        Object [][] data=listarContenido(leerArc);
+        Object[][] data=listarContenido(leerArc);
         int cantidadFilas=0;
         double cantDeVentas=0, RecaudacionTotal=0;
         try {            
@@ -33,7 +33,7 @@ public class reporteVentas extends AppCrud {
             }
         }
         System.out.println("la cantidad de filas es:"+cantidadFilas);
-        Object [][] dataDia=new Object[cantidadFilas][data[0].length];
+        Object[][] dataDia=new Object[cantidadFilas][data[0].length];
         int filaX=0, columnaX=0;
         for(int fila=0;fila<data.length;fila++){
             String[] vectorFecha=data[fila][1].toString().split(" ");
@@ -44,7 +44,6 @@ public class reporteVentas extends AppCrud {
             vectorFecha[0].equals(fechaFinal)){
             for(int columna=0;columna<data[0].length;columna++){
                 dataDia[filaX][columnaX]=data[fila][columna];
-                //if(columna==0){cantDeVentas++;}
                 if(columna==2){RecaudacionTotal+=Double.parseDouble(data[fila][columna].toString());}
                 columnaX++;
                 }
